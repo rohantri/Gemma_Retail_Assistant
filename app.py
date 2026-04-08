@@ -28,11 +28,11 @@ if st.button("Generate Strategy"):
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_input}
                 ],
-                model="gemma2-9b-it", # Specifying the Gemma model
+                model="llama-3.1-8b-instant", # Specifying the Gemma model
                 temperature=0.7,
                 max_tokens=1024,
             )
-            
+    
             # Display the result
             result = chat_completion.choices[0].message.content
             st.success("Analysis Complete!")
